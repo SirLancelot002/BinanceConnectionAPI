@@ -245,12 +245,8 @@ namespace TheAlgorithm
             return null;
         }
 
-        private async Task ExecuteTrade(Dictionary<string, string> parameters)//Erre visszajön a Margin-os function. Azaz 
+        private async Task ExecuteTrade(Dictionary<string, string> parameters)//Erre visszajön a Margin function. 
         {
-            /*string queryString = SignRequest(string.Join("&", parameters.Select(p => $"{p.Key}={p.Value}")));
-            var response = await httpClient.PostAsync($"{baseUrl}/sapi/v1/margin/order?{queryString}", null);
-            Console.WriteLine($"Trade Response: {await response.Content.ReadAsStringAsync()}");*/
-
             // Sort parameters alphabetically by key
             var orderedParams = parameters.OrderBy(p => p.Key).ToList();
 
